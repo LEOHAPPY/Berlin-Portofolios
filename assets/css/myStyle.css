@@ -53,7 +53,7 @@ div {
     left: 0;
     z-index: 200;
 
-    height:100vh;
+    height:100%;
 }
 
 
@@ -65,7 +65,7 @@ div {
     top: 0;
     left: 0;
 
-    height:100vh;
+    height:100%;
 }
 
 .leftSide{
@@ -76,7 +76,8 @@ div {
 }
 
 .aboutPage .leftSide{
-    background: lightcoral;
+    background: #f8cacc;
+    /*background: rgb(41,41,41);*/
 }
 .workPage .leftSide{
     background: lightskyblue;
@@ -97,11 +98,9 @@ div {
     height:100%;
 }
 
-
-
-
 .aboutContent{
     padding: 10%;
+    padding-left:15%;
 }
 
 .endPage{
@@ -113,11 +112,140 @@ div {
     /*z-index: -1;*/
 }
 
-p{
+.firstTitle{
+    /*position: absolute;*/
+    /*padding: 36px 0;*/
+    padding-top: 2%;
     text-align: center;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.chapterTitle{
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+nav > ol, nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+nav > ol li, nav > ul li {
+    margin: 0;
+    padding: 0
+}
+
+.main-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.main-nav ul {
+    padding: 36px 0;
+    text-align: center
+}
+
+.main-nav ul li {
+    display: inline-block
+}
+
+.main-nav ul li:before {
+    content: '/';
+    padding: 0 12px 0 9px
+}
+
+.main-nav ul li:first-child:before {
+    display: none
+}
+
+.main-nav ul li a {
+    color: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.main-nav ul li a:after {
+    bottom: -.4em;
+    border-width: 2px;
+    display: none
+}
+
+.main-nav ul li a:hover:after {
+    display: block
+}
+
+.text-color--red {
+    color: #f7484e
+}
+
+.underlined--white:after {
+    border-color: #fff
 }
 
 
-.aboutPage p{
-    text-align: left;
+
+/*.vertical-align-helper:before {*/
+    /*content: '';*/
+    /*display: inline-block;*/
+    /*height: 100%;*/
+    /*vertical-align: middle;*/
+    /*margin-left: -5px;*/
+
+    /*text-align: center*/
+/*}*/
+
+/*.vertical-align-helper > [class*=vertical-align--] {*/
+    /*display: inline-block;*/
+    /*width: 100%*/
+/*}*/
+
+
+
+/* The hero image */
+.fullPage-image {
+    /* The image used */
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-image{
+    background-image: url("../img/footer.JPG");
+}
+
+.footer-image{
+    background-image: url("../img/turkey.jpg");
+}
+
+.aboutImg{
+    width:40%;
+    height: 100%;
+    padding-bottom: 5%;
+    border-radius: 50%;
+}
+
+.portrait{
+    max-width: 135px;
+    position: absolute;
+    right: -67px;
+    top: 96px
+}
+
+.socialLogo{
+    display: inline;
+    height: 20%;
+    padding-left: 10px;
 }
