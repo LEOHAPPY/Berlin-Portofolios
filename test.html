@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="assets/css/myStyle.css">
+    <style>
+        .div-wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .div-wrapper img {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+    </style>
 </head>
 <body>
 
-<div class="hero-image fullPage-image">
-    <div class="hero-text">
-        <h1>I am John Doe</h1>
-        <p>And I'm a Photographer</p>
-        <button>Hire me</button>
-    </div>
+<div class="div-wrapper">
+    <img src="assets/img/turkey.jpg"/>
 </div>
 
 </body>

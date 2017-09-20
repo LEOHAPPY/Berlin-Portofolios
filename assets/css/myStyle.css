@@ -46,30 +46,52 @@ div {
     z-index: 200;
 }
 
-.sticky-wrapper{
+/*.sticky-wrapper{*/
+    /*position: absolute;*/
+    /*width: 50%;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*z-index: 200;*/
+
+    /*height:100%;*/
+/*}*/
+
+
+/*.fixed{*/
+    /*position: fixed;*/
+    /*top:0;*/
+/*}*/
+
+/*.is-sticky{*/
+    /*!*position: fixed;*!*/
+    /*margin: 0;*/
+    /*padding:0;*/
+    /*width: 50%;*/
+    /*top: 0;*/
+    /*left: 0;*/
+
+    /*height:100%;*/
+/*}*/
+
+.aboutPage .leftSide.fixed{
+    position: fixed;
+}
+.workPage .leftSide.fixed{
+    position: fixed;
+}
+.contactPage .leftSide.fixed{
+    position: fixed;
+}
+
+.leftSide{
+    height:100%;
+
     position: absolute;
     width: 50%;
     top: 0;
     left: 0;
     z-index: 200;
 
-    height:100%;
-}
-
-
-.is-sticky{
-    /*position: fixed;*/
-    margin: 0;
-    padding:0;
-    width: 50%;
-    top: 0;
-    left: 0;
-
-    height:100%;
-}
-
-.leftSide{
-    height:100%;
     /*animation*/
     /*-webkit-transition: 1s width cubic-bezier(.77,0,.175,1);*/
     /*transition: 1s width cubic-bezier(.77,0,.175,1);*/
@@ -98,19 +120,12 @@ div {
     height:100%;
 }
 
-.aboutContent{
+.content{
     padding: 10%;
     padding-left:15%;
 }
 
-.endPage{
-    height: 100vh;
-    z-index: 200;
 
-    background-color: lightcoral;
-    /*position: relative;*/
-    /*z-index: -1;*/
-}
 
 .firstTitle{
     /*position: absolute;*/
@@ -182,7 +197,7 @@ nav > ol li, nav > ul li {
 }
 
 .text-color--red {
-    color: #f7484e
+    color: white;
 }
 
 .underlined--white:after {
@@ -229,8 +244,23 @@ nav > ol li, nav > ul li {
 .footer-image{
     background-image: url("../img/turkey.jpg");
 }
+.footerPage{
+    /*overflow: hidden;*/
 
-.aboutImg{
+    /*height: */
+    z-index: 100;
+
+    background-color: lightcoral;
+    position: relative;
+    /*z-index: -1;*/
+}
+
+.footerPage:after {
+    padding-top: 200%;
+}
+
+
+.about-image{
     width:40%;
     height: 100%;
     padding-bottom: 5%;
@@ -246,6 +276,4 @@ nav > ol li, nav > ul li {
 
 .socialLogo{
     display: inline;
-    height: 20%;
-    padding-left: 10px;
 }
