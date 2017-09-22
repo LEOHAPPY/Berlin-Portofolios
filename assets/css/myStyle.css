@@ -236,29 +236,45 @@ nav > ol li, nav > ul li {
     background-size: cover;
     position: relative;
 }
-
-.hero-image{
-    background-image: url("../img/footer.JPG");
-}
-
-.footer-image{
-    background-image: url("../img/turkey.jpg");
-}
 .footerPage{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    padding-top:200%;
+    height:100%;
+    width:100%;
+
+}
+
+footer{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    padding-top:400%;
+    height:100vh;
     /*overflow: hidden;*/
 
     /*height: */
-    z-index: 100;
+    /*padding-top: 300%;*/
+    /*overflow: hidden;*/
+    /*padding-top: 100%;*/
 
-    background-color: lightcoral;
-    position: relative;
     /*z-index: -1;*/
 }
+/*footer{*/
+    /*content: '';*/
+    /*display: block;*/
+    /*padding-top: 600%;*/
+    /*z-index: -1;*/
+/*}*/
+/*.footerPage:after {*/
+    /*content: '';*/
+    /*display: block;*/
+    /*padding-top: 200%;*/
 
-.footerPage:after {
-    padding-top: 200%;
-}
-
+/*}*/
 
 .about-image{
     width:40%;
@@ -276,4 +292,185 @@ nav > ol li, nav > ul li {
 
 .socialLogo{
     display: inline;
+}
+
+/*project */
+.csstransitions .chapter--expanded .project .project__header .header__image, .csstransitions .chapter--loading .project .project__header .header__image, .csstransitions .project .project__header:hover .header__image {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3)
+}
+
+.no-csstransforms3d .header__cta {
+    display: none
+}
+
+.project {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    left: 0;
+    -webkit-transition: 1s left cubic-bezier(.77, 0, .175, 1);
+    transition: 1s left cubic-bezier(.77, 0, .175, 1)
+}
+
+.project:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+/*.project{*/
+    /*overflow: hidden;*/
+    /*display: block;*/
+
+    /*height: 100%;*/
+
+    /*!* Position and center the image to scale nicely on all screens *!*/
+    /*!*background-position: center;*!*/
+    /*!*background-repeat: no-repeat;*!*/
+    /*!*background-size: cover;*!*/
+    /*!*position: relative;*!*/
+/*}*/
+/*.p1-image{*/
+    /*background-image: url("../img/jeju.jpg");*/
+/*}*/
+
+/*.p2-image{*/
+    /*background-image: url("../img/footer.JPG");*/
+/*}*/
+
+/*.img{*/
+    /*max-width:100%;*/
+    /*max-height:100%;*/
+
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*-webkit-transform: scale(1);*/
+    /*-ms-transform: scale(1);*/
+    /*transform: scale(1);*/
+    /*background-size: cover;*/
+    /*background-position: center center;*/
+    /*-webkit-transition: 15s -webkit-transform linear;*/
+    /*transition: 15s transform linear*/
+/*}*/
+
+.project .project__header {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: .8s height cubic-bezier(.77, 0, .175, 1);
+    transition: .8s height cubic-bezier(.77, 0, .175, 1)
+}
+
+.project .project__header .header__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: 15s -webkit-transform linear;
+    transition: 15s transform linear
+}
+
+.project .project__header .header__subtitle {
+    font-size: 11px;
+    letter-spacing: .1em
+}
+
+.project .project__header .header__cta {
+    margin-top: 2em;
+    -webkit-transition: .4s -webkit-transform cubic-bezier(.6, -.28, .735, .045) .5s;
+    transition: .4s transform cubic-bezier(.6, -.28, .735, .045) .5s
+}
+
+.project .project__header .header__cta .button__label {
+    -webkit-transform: translateY(-50%) scale(1);
+    -ms-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+    -webkit-transition: .4s cubic-bezier(.6, -.28, .735, .045) 0s;
+    transition: .4s cubic-bezier(.6, -.28, .735, .045) 0s
+}
+
+.project .project__header .header__content {
+    position: relative
+}
+
+.project .project__header:hover .header__cta {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .4s -webkit-transform cubic-bezier(.175, .885, .32, 1.275) 0s;
+    transition: .4s transform cubic-bezier(.175, .885, .32, 1.275) 0s
+}
+
+.project .project__header:hover .header__cta .button__label {
+    -webkit-transform: translateY(-50%) scale(1);
+    -ms-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+    -webkit-transition: .4s cubic-bezier(.165, .84, .44, 1) .3s;
+    transition: .4s cubic-bezier(.165, .84, .44, 1) .3s
+}
+
+.project .project__content {
+    overflow: hidden;
+    position: relative;
+    height:100vh;
+}
+
+.project .project__close {
+    display: none
+}
+
+/*charpter expand*/
+.chapter--expanded .project .project__header, .chapter--loading .project .project__header {
+    cursor: default
+}
+
+.chapter--expanded .project .project__header .header__image, .chapter--loading .project .project__header .header__image {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3)
+}
+
+.chapter--expanded .project .project__header .header__cta, .chapter--loading .project .project__header .header__cta {
+    -webkit-transform: scale(.5);
+    -ms-transform: scale(.5);
+    transform: scale(.5);
+    -webkit-transition: .4s -webkit-transform cubic-bezier(.6, -.28, .735, .045) .5s, .8s height cubic-bezier(.77, 0, .175, 1) .5s;
+    transition: .4s transform cubic-bezier(.6, -.28, .735, .045) .5s, .8s height cubic-bezier(.77, 0, .175, 1) .5s
+}
+
+.chapter--expanded .project .project__header .header__cta .slice, .chapter--loading .project .project__header .header__cta .slice {
+    border-left-color: #000
+}
+
+.chapter--expanded .project .project__header .header__cta .button__label, .chapter--loading .project .project__header .header__cta .button__label {
+    -webkit-transform: translateY(-50%) scale(0);
+    -ms-transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) scale(0);
+    -webkit-transition: .4s cubic-bezier(.6, -.28, .735, .045) 0s;
+    transition: .4s cubic-bezier(.6, -.28, .735, .045) 0s
+}
+
+.chapter--expanded .project {
+    width: 100%;
+    left: 0;
+    -webkit-transition: 1s left cubic-bezier(.77, 0, .175, 1) 0s, 1s width cubic-bezier(.77, 0, .175, 1) 0s;
+    transition: 1s left cubic-bezier(.77, 0, .175, 1) 0s, 1s width cubic-bezier(.77, 0, .175, 1) 0s
+}
+
+.chapter--expanded .project .project__header .header__cta {
+    height: 0;
+    -webkit-transition: .4s -webkit-transform cubic-bezier(.6, -.28, .735, .045) .5s, .8s height cubic-bezier(.77, 0, .175, 1) .5s;
+    transition: .4s transform cubic-bezier(.6, -.28, .735, .045) .5s, .8s height cubic-bezier(.77, 0, .175, 1) .5s
 }
