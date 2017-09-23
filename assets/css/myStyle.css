@@ -330,7 +330,9 @@ footer{
 .project:hover{
     box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
-
+.project.disappear{
+    display:none;
+}
 .project:active{
     -ms-transition-duration: 0.2s;
     -ms-transform: scale(0.95);}

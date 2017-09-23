@@ -2,10 +2,12 @@ $(document).ready(function () {
 
     /* go to top after refresh */
     $(window).scrollTop(0);
-
+    $( window ).resize(function() {
+        basicCalculationUpdate();
+    });
     // $(".chapterTitle").
 
-    $("#more-info").on("click",function () {
+    $("#moreinfo-p1").on("click", function () {
         //expand width 75% 25%
         $("#workL").addClass("compress");
         $("#workR").addClass("expand");
@@ -13,42 +15,47 @@ $(document).ready(function () {
         scrollToHash("#work");
 
         //disappear other projects
-        var project_list = [];
-        project_list = $(".project");
-        console.log(project_list.length)
+        projectDisapper(this);
+
+        //recalculate height
+        basicCalculationUpdate();
+
         //image container cut to 50% height
 
         //add content to this projects
 
     });
 
+    function projectDisapper(object) {
+        var project_list = [];
+        project_list = $(".project");
+        console.log(object.id);
+        var project_id = object.id.substring(10, object.id.length);
+        console.log(project_id);
+        for (i = 1; i <= project_list.length; i++) {
+            if (i == project_id) continue;
+            else {
+                var project_id_disappear = "#project-" + i;
+                console.log(project_id_disappear);
+                $(project_id_disappear).addClass("disappear");
+            }
+        }
+    }
+
     function scrollToHash(hashName) {
         // window.location = location.hash;
 
-        var dest=0;
-        if($(hashName).offset().top > $(document).height()-$(window).height()){
-            dest=$(document).height()-$(window).height();
-        }else{
-            dest=$(hashName).offset().top;
+        var dest = 0;
+        if ($(hashName).offset().top > $(document).height() - $(window).height()) {
+            dest = $(document).height() - $(window).height();
+        } else {
+            dest = $(hashName).offset().top;
         }
         //go to destination
-        $('html,body').animate({scrollTop:dest}, 1000,'swing');
+        $('html,body').animate({scrollTop: dest}, 1000, 'swing');
     }
 
-    $(".scroll").click(function(event){
-        event.preventDefault();
-        //calculate destination place
-        var dest=0;
-        if($(this.hash).offset().top > $(document).height()-$(window).height()){
-            dest=$(document).height()-$(window).height();
-        }else{
-            dest=$(this.hash).offset().top;
-        }
-        //go to destination
-        $('html,body').animate({scrollTop:dest}, 1000,'swing');
-    });
-
-    $("#expand-close").on("click",function () {
+    $("#expand-close").on("click", function () {
         //expand width 75% 25%
         $("#workL").removeClass("compress");
         $("#workR").removeClass("expand");
@@ -69,6 +76,26 @@ $(document).ready(function () {
     var aContentHeight = aR.height(),
         wContentHeight = wR.height(),
         cContentHeight = cR.height();
+
+    // basicCalculationUpdate().init();
+    function basicCalculationUpdate() {
+        console.log("updating")
+
+        aR = $('#aboutR');
+        wR = $('#workR');
+        cR = $('#contactR');
+
+        aOffset = aR.offset().top;
+        wOffset = wR.offset().top;
+        cOffset = cR.offset().top;
+
+        winHeight = $(window).height();
+        console.log(winHeight);
+
+        aContentHeight = aR.height();
+        wContentHeight = wR.height();
+        cContentHeight = cR.height();
+    }
 
 
     $(window).scroll(function () {
@@ -117,7 +144,7 @@ $(document).ready(function () {
     // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
-        .click(function(event) {
+        .click(function (event) {
             // On-page links
             if (
                 location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
@@ -133,7 +160,7 @@ $(document).ready(function () {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1000, function() {
+                    }, 1000, function () {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);
@@ -141,9 +168,10 @@ $(document).ready(function () {
                         if ($target.is(":focus")) { // Checking if the target was focused
                             return false;
                         } else {
-                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
                             $target.focus(); // Set focus again
-                        };
+                        }
+                        ;
                     });
                 }
             }
