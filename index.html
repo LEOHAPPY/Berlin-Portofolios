@@ -10,6 +10,7 @@
     <script src="assets/js/jquery.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/myJS.js"></script>
 
 </head>
 <body>
@@ -76,18 +77,22 @@
                 <nav>
                     <ul>
                         <li>
-                            <div class="project" id="bangkok-project">
-                                <a href="bangkok" class="project__header">
+                            <div class="project" id="project1-1">
+                                <div href="bangkok" class="project__header">
                                     <div class="header__image"
                                          style="background-image: url(http://photos.breadtrip.com/photo_2017_01_15_90f776d8f4879747a4943230d5010142.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_90f776d8f4879747a4943230d5010142.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_90f776d8f4879747a4943230d5010142.jpg?imageView/2/w/960/q/85',sizingMethod='scale');">
+
+                                        <button type="button" class="btn btn-outline-info" id="more-info" href="#work">Info</button>
+                                        <button type="button" class="btn btn-outline-info" id="expand-close">Close Expand</button>
+
                                     </div>
                                     <div class="project__content"></div>
-                                </a>
+                                </div>
                             </div>
                         </li>
 
                         <li>
-                            <div class="project" id="bali-project">
+                            <div class="project" id="project-2">
                                 <a href="bali" class="project__header">
                                     <div class="header__image"
                                          style="background-image: url(http://photos.breadtrip.com/photo_2017_01_24_cf97359cfdafb436ee4ae570d2e98a6d.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_24_cf97359cfdafb436ee4ae570d2e98a6d.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_24_cf97359cfdafb436ee4ae570d2e98a6d.jpg?imageView/2/w/960/q/85',sizingMethod='scale');">
@@ -98,7 +103,7 @@
                         </li>
 
                         <li>
-                            <div class="project" id="jeju-project">
+                            <div class="project" id="project-3">
                                 <a href="jeju" class="project__header">
                                     <div class="header__image"
                                          style="background-image: url(http://photos.breadtrip.com/photo_2017_01_15_d38a2d1cd26cf3d5cc7c0c37a8debd4b.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_d38a2d1cd26cf3d5cc7c0c37a8debd4b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_d38a2d1cd26cf3d5cc7c0c37a8debd4b.jpg?imageView/2/w/960/q/85',sizingMethod='scale');">
@@ -109,7 +114,7 @@
                         </li>
 
                         <li>
-                            <div class="project" id="taipei-project">
+                            <div class="project" id="project-4">
                                 <a href="taipei" class="project__header">
                                     <div class="header__image"
                                          style="background-image: url(http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85',sizingMethod='scale');">
@@ -120,7 +125,7 @@
                         </li>
 
                         <li>
-                            <div class="project" id="turkey-project">
+                            <div class="project" id="project-5">
                                 <a href="turkey" class="project__header">
                                     <div class="header__image"
                                          style="background-image: url(http://photos.breadtrip.com/photo_2017_01_15_7de4ad27ebd928391904f4d981e29e17.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_7de4ad27ebd928391904f4d981e29e17.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_7de4ad27ebd928391904f4d981e29e17.jpg?imageView/2/w/960/q/85',sizingMethod='scale');">
@@ -217,117 +222,7 @@
 
 <script>
 
-    $(document).ready(function () {
 
-        /* go to top after refresh */
-        $(window).scrollTop(0);
-
-        var aR = $('#aboutR'),
-            wR = $('#workR'),
-            cR = $('#contactR');
-
-        var aOffset = aR.offset().top,
-            wOffset = wR.offset().top,
-            cOffset = cR.offset().top;
-
-        var winHeight = $(window).height();
-
-        var aContentHeight = aR.height(),
-            wContentHeight = wR.height(),
-            cContentHeight = cR.height();
-
-
-        $(window).scroll(function () {
-            var scrollTop = $('body').scrollTop();
-//        console.log(scrollTop - aOffset);
-
-            if (scrollTop - aOffset > 0) {
-                startFix("#aboutL");
-                if ((scrollTop - aOffset) > (aContentHeight - winHeight)) {
-                    endFix("#aboutL");
-                }
-            } else {
-                endFix("#aboutL")
-            }
-
-            if (scrollTop - wOffset > 0) {
-                startFix("#workL");
-                if ((scrollTop - wOffset) > (wContentHeight - winHeight)) {
-                    endFix("#workL");
-                }
-            } else {
-                endFix("#workL")
-            }
-
-            if (scrollTop - cOffset > 0) {
-                startFix("#contactL");
-                if ((scrollTop - cOffset) > (cContentHeight - winHeight)) {
-                    endFix("#contactL");
-                }
-            } else {
-                endFix("#contactL")
-            }
-
-        });
-
-        function startFix(name) {
-            $(name).addClass("fixed");
-        }
-
-        function endFix(name) {
-            $(name).removeClass("fixed");
-        }
-
-
-//    var winScrollTo;
-//    var windowHeight = $(window).height();
-//
-//    $(window).scroll(function () {
-//        winScrollTo = $(window).scrollTop();
-//        console.log(winScrollTo);
-//
-//        $("#about").
-//    });
-
-//    $(".sticker1").sticky({ topSpacing: 0});
-//    $(".sticker2").sticky({ topSpacing: 0});
-//    $(".sticker3").sticky({ topSpacing: 0});
-//
-//    $('.sticker').on('sticky-start', function() {
-//        console.log("Sticky Started");
-//
-//        var aContentHeight = $(".aboutContent").outerHeight();
-//        console.log(aContentHeight);
-//        var contentScrollPos = $(".aboutContent").offset().top;
-//        console.log(contentScrollPos);
-//
-//        if((winScrollTo) > (aContentHeight)){
-//            $(".sticker").unstick();
-//        }
-//
-//
-//    });
-//    $('.sticker').on('sticky-end', function() { console.log("Ended"); });
-//    $('.sticker').on('sticky-update', function() { console.log("Update"); });
-//    $('.sticker').on('sticky-bottom-reached', function() { console.log("Bottom reached"); });
-//    $('.sticker').on('sticky-bottom-unreached', function() { console.log("Bottom unreached"); });
-
-//    $(window).scroll(function () {
-//        var scrollTo = $(window).scrollTop();
-//        var docHeight = $(document).height();
-//        var windowHeight = $(window).height();
-//
-//
-//        if (scrollTo <= windowHeight){
-//            $(".rightSide").scroll(function(event){
-//                console.log(scrollTo + " " + windowHeight);
-//
-//                event.preventDefault();
-//            });
-//        }
-////        $(".rightSide").scrollTop($(".leftSide").scrollTop());
-//    });
-    });
 </script>
 </body>
 </html>
