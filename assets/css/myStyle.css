@@ -100,8 +100,10 @@ div {
 .chapterTitle{
     text-align: center;
     vertical-align: middle;
-    padding-top: 50%;
-
+    /*padding-top: 50%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /*display: table-cell;*/
     /*height:100%;*/
 
@@ -399,21 +401,21 @@ footer{
     background-position: center;
     background-repeat: no-repeat;
 
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: 15s -webkit-transform linear;
-    transition: 15s transform linear;
-}
-
-/*.project .project__header .header__image:hover{*/
     /*-webkit-transform: scale(1);*/
     /*-ms-transform: scale(1);*/
     /*transform: scale(1);*/
-    /*-webkit-transition: .4s -webkit-transform cubic-bezier(.175, .885, .32, 1.275);*/
-    /*transition: .4s transform cubic-bezier(.175, .885, .32, 1.275);*/
+    /*-webkit-transition: 15s -webkit-transform linear;*/
+    /*transition: 15s transform linear;*/
+    -webkit-transition: all 3s linear;
+    transition: all 3s linear;
+    /*-webkit-transform: scale3d(1, 1, 1);*/
+    /*transform: scale3d(1, 1, 1);*/
+}
 
-/*}*/
+.project .project__header .header__image:hover{
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+}
 
 .project .project__header .header__subtitle {
     font-size: 11px;

@@ -1,67 +1,5 @@
 $(document).ready(function () {
 
-    /* go to top after refresh */
-    $(window).scrollTop(0);
-    $( window ).resize(function() {
-        basicCalculationUpdate();
-    });
-    // $(".chapterTitle").
-
-    $("#moreinfo-p1").on("click", function () {
-        //expand width 75% 25%
-        $("#workL").addClass("compress");
-        $("#workR").addClass("expand");
-
-        scrollToHash("#work");
-
-        //disappear other projects
-        projectDisapper(this);
-
-        //recalculate height
-        basicCalculationUpdate();
-
-        //image container cut to 50% height
-
-        //add content to this projects
-
-    });
-
-    function projectDisapper(object) {
-        var project_list = [];
-        project_list = $(".project");
-        console.log(object.id);
-        var project_id = object.id.substring(10, object.id.length);
-        console.log(project_id);
-        for (i = 1; i <= project_list.length; i++) {
-            if (i == project_id) continue;
-            else {
-                var project_id_disappear = "#project-" + i;
-                console.log(project_id_disappear);
-                $(project_id_disappear).addClass("disappear");
-            }
-        }
-    }
-
-    function scrollToHash(hashName) {
-        // window.location = location.hash;
-
-        var dest = 0;
-        if ($(hashName).offset().top > $(document).height() - $(window).height()) {
-            dest = $(document).height() - $(window).height();
-        } else {
-            dest = $(hashName).offset().top;
-        }
-        //go to destination
-        $('html,body').animate({scrollTop: dest}, 1000, 'swing');
-    }
-
-    $("#expand-close").on("click", function () {
-        //expand width 75% 25%
-        $("#workL").removeClass("compress");
-        $("#workR").removeClass("expand");
-
-        //recover other project
-    });
     //dynamic sticky funciton
     var aR = $('#aboutR'),
         wR = $('#workR'),
@@ -77,9 +15,81 @@ $(document).ready(function () {
         wContentHeight = wR.height(),
         cContentHeight = cR.height();
 
+    /* go to top after refresh */
+    $(window).scrollTop(0);
+    $(window).resize(function () {
+        basicCalculationUpdate();
+    });
+    // $(".chapterTitle").
+    $("button[id^='moreinfo-p']").on("click", function () {
+
+
+        //disappear other projects
+        projectDisapper(this);
+
+        //expand width 75% 25%
+        $("#workL").addClass("compress");
+        $("#workR").addClass("expand");
+
+        scrollToHash("#work");
+        //recalculate height
+        basicCalculationUpdate();
+
+        //image container cut to 50% height
+
+        //add content to this projects
+
+    });
+
+    function projectDisapper(object) {
+        // console.log("project disappear")
+        var project_list = [];
+        project_list = $(".project");
+        // console.log(object.id);
+        var project_id = object.id.substring(10, object.id.length);
+        // console.log(project_id);
+        for (i = 1; i <= project_list.length; i++) {
+            if (i != project_id) {
+                var project_id_disappear = "#project-" + i;
+                // console.log(project_id_disappear);
+                $(project_id_disappear).addClass("disappear");
+            }
+        }
+
+        //scroll to div top
+        // var currentProject = $("#project-"+project_id);
+        // var dest=0;
+        // var projectOffset = currentProject.offset.top();
+        // dest = wOffset + winHeight-(projectOffset - wOffset - (project_id-1)*winHeight);
+        // currentProject.animate({scrollTop: dest}, 500, 'swing');
+    }
+
+    function scrollToHash(hashName) {
+        // window.location = location.hash;
+        console.log(hashName)
+        var dest = 0;
+        if ($(hashName).offset().top > $(document).height() - $(window).height()) {
+            dest = $(document).height() - $(window).height();
+        } else {
+            dest = $(hashName).offset().top;
+        }
+        // dest += $(hashName)
+        //go to destination
+        $('html,body').animate({scrollTop: dest}, 1000, 'swing');
+    }
+
+    $("#expand-close").on("click", function () {
+        //expand width 75% 25%
+        $("#workL").removeClass("compress");
+        $("#workR").removeClass("expand");
+
+        //recover other project
+    });
+
+
     // basicCalculationUpdate().init();
     function basicCalculationUpdate() {
-        console.log("updating")
+        // console.log("updating")
 
         aR = $('#aboutR');
         wR = $('#workR');
@@ -90,7 +100,7 @@ $(document).ready(function () {
         cOffset = cR.offset().top;
 
         winHeight = $(window).height();
-        console.log(winHeight);
+        // console.log(winHeight);
 
         aContentHeight = aR.height();
         wContentHeight = wR.height();
@@ -101,7 +111,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var scrollTop = $('body').scrollTop();
 //        console.log(scrollTop - aOffset);
-
+// console.log(wOffset);
         if (scrollTop - aOffset > 0) {
             startFix("#aboutL");
             if ((scrollTop - aOffset) > (aContentHeight - winHeight)) {
