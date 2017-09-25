@@ -383,15 +383,13 @@ footer{
     top: 0;
     left: 0;
     width: 100%;
-    -webkit-transition: .8s height cubic-bezier(.77, 0, .175, 1);
-    transition: .8s height cubic-bezier(.77, 0, .1project__content75, 1);
 
-    height: 100vh;
+    height: 50vh;
 
 }
 
 .project .project__header .header__image {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -457,6 +455,7 @@ footer{
 }
 
 .project .project__content {
+    display: none;
     overflow: hidden;
     position: relative;
 }

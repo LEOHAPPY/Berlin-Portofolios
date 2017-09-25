@@ -23,9 +23,10 @@ $(document).ready(function () {
     // $(".chapterTitle").
     $("button[id^='moreinfo-p']").on("click", function () {
 
-
+        var project_id = this.id.substring(10, this.id.length);
+        var currentProject = $("#project-"+project_id);
         //disappear other projects
-        projectDisapper(this);
+        projectDisapper(project_id);
 
         //expand width 75% 25%
         $("#workL").addClass("compress");
@@ -36,17 +37,25 @@ $(document).ready(function () {
         basicCalculationUpdate();
 
         //image container cut to 50% height
+        // currentProject.find(".header__image").css({"height":"50%"})
+        // currentProject.find(".project__content").css({"display":"inline"})
+        //container height to 100%
+        // $(".project .project__header").css({"height":"100vh"})
+        //fix left side
+        startFix("#workL");
+
+        // $(".ancestors").find("span").css({"color": "red", "border": "2px solid red"});
 
         //add content to this projects
 
     });
 
-    function projectDisapper(object) {
+    function projectDisapper(project_id) {
         // console.log("project disappear")
         var project_list = [];
         project_list = $(".project");
         // console.log(object.id);
-        var project_id = object.id.substring(10, object.id.length);
+        // var project_id = object.id.substring(10, object.id.length);
         // console.log(project_id);
         for (i = 1; i <= project_list.length; i++) {
             if (i != project_id) {
