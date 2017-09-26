@@ -9,6 +9,7 @@
 
 html, body{
     height:100%;
+    font-family: 'Roboto', sans-serif;
 
 }
 div {
@@ -80,11 +81,17 @@ div {
     text-align: center;
     vertical-align: middle;
     padding-top: 50%;
+    text-transform: uppercase;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight:bold;
     /*display: flex;*/
     /*justify-content: center;*/
     /*align-items: center;*/
     /*display: table-cell;*/
     /*height:100%;*/
+
+    /*writing-mode: vertical-rl;*/
+    /*text-orientation: upright;*/
 
 
 }
@@ -413,33 +420,31 @@ footer{
 }
 
 .project__content .project-details{
-    overflow: hidden;
     position: relative;
     width: 100%;
-    border-bottom: 1px solid darkgrey;
+    height: 100%;
+    /*border-bottom: 1px solid darkgrey;*/
 }
-.project-details .project-details-container{
-    display: block;
-    overflow: hidden;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    height: 100vh;
-}
+/*.project-details .project-details-container{*/
+    /*display: block;*/
+    /*overflow: hidden;*/
+    /*position: relative;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height:100%;*/
+/*}*/
 .project-details img{
-    position: relative;
-    top: 0;
-    left: 0;
+    padding-bottom: 2px;
+    position:relative;
     width: 100%;
-    height:100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .project-nav{
     position: relative;
     padding-top: 10%;
-
 }
 
 /*.project-nav img{*/
