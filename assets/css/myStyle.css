@@ -92,8 +92,6 @@ div {
 
     /*writing-mode: vertical-rl;*/
     /*text-orientation: upright;*/
-
-
 }
 
 .vertical-align-helper:before {
@@ -121,15 +119,15 @@ div {
     background: #f8cacc;
     /*background: rgb(41,41,41);*/
 }
-.workPage .leftSide{
-    background: lightsteelblue;
-}
+/*.workPage .leftSide{*/
+    /*background: lightsteelblue;*/
+/*}*/
 /*.workPage .rightSide{*/
     /*background: #000;*/
 /*}*/
 
 .contactPage .leftSide{
-    background: lightcyan;
+    background: #f8cacc;
 }
 .rightSide{
     position: relative;
@@ -454,3 +452,15 @@ footer{
     /*padding:0;*/
     /*margin: 0;*/
 /*}*/
+
+.work-nav{
+    text-align: center;
+
+}
+.work-nav a{
+    color: dimgray;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+.work-nav a:hover{
+}
