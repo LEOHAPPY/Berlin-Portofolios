@@ -29,8 +29,27 @@ $(document).ready(function () {
     $(window).resize(function () {
         basicCalculationUpdate();
     });
+
+    $("#expand-close").on("click", function () {
+        //expand width 75% 25%
+        $("#workL").removeClass("compress");
+        $("#workR").removeClass("expand");
+
+        //display recover
+        var project_list = [];
+        project_list = $(".project");
+        $(".project").find(".project__content").css({"display":"none"});
+        $(".project").removeClass("disappear")
+        $(".project").find(".project__header").css({"height":"100vh"})
+
+        //recover other project
+    });
+
     // $(".chapterTitle").
     $("button[id^='moreinfo-p']").on("click", function () {
+
+        //show the cancel expand button
+        $("#expand-close").css({"display":"inline"});
 
         var project_id = this.id.substring(10, this.id.length);
         var currentProject = $("#project-"+project_id);
@@ -43,11 +62,13 @@ $(document).ready(function () {
 
         scrollToHash("#work");
         //recalculate height
-        basicCalculationUpdate();
+        // basicCalculationUpdate();
 
         //image container cut to 50% height
-        // currentProject.find(".header__image").css({"height":"85%"})
+        currentProject.find(".project__header").css({"height":"30vh"})
+
         currentProject.find(".project__content").css({"display":"inline"});
+
         basicCalculationUpdate();
         //container height to 100%
         // $(".project .project__header").css({"height":"100vh"})
@@ -97,13 +118,7 @@ $(document).ready(function () {
         $('html,body').animate({scrollTop: dest}, 1000, 'swing');
     }
 
-    $("#expand-close").on("click", function () {
-        //expand width 75% 25%
-        $("#workL").removeClass("compress");
-        $("#workR").removeClass("expand");
 
-        //recover other project
-    });
 
 
     // basicCalculationUpdate().init();

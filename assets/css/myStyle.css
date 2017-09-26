@@ -1,6 +1,6 @@
-/*::-webkit-scrollbar{*/
-    /*display: none;*/
-/*}*/
+::-webkit-scrollbar{
+    display: none;
+}
 
 *{
     margin:0;
@@ -293,15 +293,6 @@ footer{
 
 /*project */
 
-.project {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    left: 0;
-    -webkit-transition: 1s left cubic-bezier(.77, 0, .175, 1);
-    transition: 1s left cubic-bezier(.77, 0, .175, 1)
-}
-
 .project.disappear{
     display:none;
 }
@@ -346,6 +337,15 @@ footer{
     /*transition: 15s transform linear*/
 /*}*/
 
+.project {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    left: 0;
+    -webkit-transition: 1s left cubic-bezier(.77, 0, .175, 1);
+    transition: 1s left cubic-bezier(.77, 0, .175, 1)
+}
+
 .project .project__header {
     display: block;
     overflow: hidden;
@@ -354,8 +354,7 @@ footer{
     left: 0;
     width: 100%;
 
-    height: 50vh;
-
+    height: 100vh;
 }
 
 .project .project__header .header__image {
@@ -402,22 +401,51 @@ footer{
     position: relative;
 }
 
-.quotation{
-    font-size:36px;
+.project__content .quotation-part{
+    padding-top: 20px;
+    text-align: center;
+    font-size:26px;
     font-weight:bold;
+    text-transform: uppercase;
+    font-family: 'Share Tech Mono', monospace;
+
+    border-bottom: 1px solid darkgrey;
+}
+
+.project__content .project-details{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid darkgrey;
+}
+.project-details .project-details-container{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    height: 100vh;
+}
+.project-details img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
 }
 
 .project-nav{
-    height:20%;
-    width:100%;
-    position:relative;
+    position: relative;
+    padding-top: 10%;
 
 }
 
-.project-nav img{
-    display:inline;
-    /*height:100%;*/
-    width:20%;
-    padding:0;
-    margin: 0;
-}
+/*.project-nav img{*/
+    /*display:inline;*/
+    /*!*height:100%;*!*/
+    /*width:20%;*/
+    /*padding:0;*/
+    /*margin: 0;*/
+/*}*/

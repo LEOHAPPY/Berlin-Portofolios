@@ -6,6 +6,9 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/myStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
 
     <script src="assets/js/jquery.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
@@ -31,14 +34,14 @@
         <div class="splitPage aboutPage" id="about">
 
             <!--<div class="leftSide" id="aboutL">-->
-                <!--<div class="vertical-align-helper text-align&#45;&#45;s-center background-color&#45;&#45;red"-->
-                     <!--data-viewport-height="100">-->
-                    <!--<div class="vertical-align&#45;&#45;s-middle">-->
-                        <!--<h2 class="">-->
-                            <!--<h1>About</h1>-->
-                        <!--</h2>-->
-                    <!--</div>-->
-                <!--</div>-->
+            <!--<div class="vertical-align-helper text-align&#45;&#45;s-center background-color&#45;&#45;red"-->
+            <!--data-viewport-height="100">-->
+            <!--<div class="vertical-align&#45;&#45;s-middle">-->
+            <!--<h2 class="">-->
+            <!--<h1>About</h1>-->
+            <!--</h2>-->
+            <!--</div>-->
+            <!--</div>-->
             <!--</div>-->
 
             <div class="leftSide" id="aboutL">
@@ -84,6 +87,9 @@
         <div class="splitPage workPage" id="work">
             <div class="leftSide" id="workL" style="background-color:white">
                 <H1 class="chapterTitle">WORK</H1>
+                <button type="button" class="btn btn-outline-info" id="expand-close" style="display: none">
+                    Close Expand
+                </button>
             </div>
             <div class="rightSide" id="workR">
                 <nav>
@@ -97,31 +103,46 @@
                                         <button type="button" class="btn btn-outline-info" id="moreinfo-p1"
                                                 href="#work">Info
                                         </button>
-                                        <button type="button" class="btn btn-outline-info" id="expand-close">Close
-                                            Expand
-                                        </button>
+
                                     </div>
                                 </div>
 
                                 <div class="project__content">
                                     <div class="quotation-part">
-                                        <span class="">"</span><p>I am a front-end developer and photographer from China living in
-                                                Singapore.</p><span class="quotation">"</span>
+                                        <p>some description</p>
                                     </div>
 
                                     <div class="project-details">
+                                        <div class="project-details-container">
+                                            <img src="http://photos.breadtrip.com/photo_2016_07_29_9b5f81dcd874e7de6e642b1e257a5658.jpg?imageView/2/w/960/q/85">
+                                        </div>
+                                        <div class="project-details-container">
+                                            <img src="http://photos.breadtrip.com/photo_2016_07_29_e1dd785b6210d0c20139f310e6f41d3c.jpg?imageView/2/w/960/q/85">
+                                        </div>
+                                        <div class="project-details-container">
+                                            <img src="http://photos.breadtrip.com/photo_2016_07_29_1f70a410a01b12f9b2fdb0bdfd9edf99.jpg?imageView/2/w/960/q/85">
+                                        </div>
+                                        <div class="project-details-container">
+                                            <img src="http://photos.breadtrip.com/photo_2016_07_30_b64a89e3c30d92b6f3cdbadf06f74be2.jpg?imageView/2/w/960/q/85">
+                                        </div>
+                                        <!--<div class="project-details-container">-->
+                                            <!--<img src="http://photos.breadtrip.com/photo_2016_07_30_f92869bd07cdf919056300c3b5cfa587.jpg?imageView/2/w/960/q/85">-->
+                                        <!--</div>-->
+                                        <!--<div class="project-details-container">-->
+                                            <!--<img src="http://photos.breadtrip.com/photo_2016_07_30_99e4af3f53999d6c19628bc1fa65eb36.jpg?imageView/2/w/960/q/85">-->
+                                        <!--</div>-->
 
+                                        <!--<img src="">-->
                                     </div>
 
-                                    <div class="project-nav">
-                                        <img src="http://photos.breadtrip.com/photo_2017_01_15_90f776d8f4879747a4943230d5010142.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_90f776d8f4879747a4943230d5010142.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_90f776d8f4879747a4943230d5010142.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">
-                                        <img src="http://photos.breadtrip.com/photo_2017_01_24_cf97359cfdafb436ee4ae570d2e98a6d.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_24_cf97359cfdafb436ee4ae570d2e98a6d.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_24_cf97359cfdafb436ee4ae570d2e98a6d.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">
-                                        <img src="http://photos.breadtrip.com/photo_2017_01_15_d38a2d1cd26cf3d5cc7c0c37a8debd4b.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_d38a2d1cd26cf3d5cc7c0c37a8debd4b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_d38a2d1cd26cf3d5cc7c0c37a8debd4b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">
-                                        <img src="http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">
-                                        <img src="http://photos.breadtrip.com/photo_2017_01_15_7de4ad27ebd928391904f4d981e29e17.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_7de4ad27ebd928391904f4d981e29e17.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_7de4ad27ebd928391904f4d981e29e17.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">
+                                    <!--<div class="project-nav">-->
 
-
-                                    </div>
+                                        <!--&lt;!&ndash;<img src="http://photos.breadtrip.com/photo_2017_01_15_90f776d8f4879747a4943230d5010142.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_90f776d8f4879747a4943230d5010142.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_90f776d8f4879747a4943230d5010142.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<img src="http://photos.breadtrip.com/photo_2017_01_24_cf97359cfdafb436ee4ae570d2e98a6d.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_24_cf97359cfdafb436ee4ae570d2e98a6d.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_24_cf97359cfdafb436ee4ae570d2e98a6d.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<img src="http://photos.breadtrip.com/photo_2017_01_15_d38a2d1cd26cf3d5cc7c0c37a8debd4b.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_d38a2d1cd26cf3d5cc7c0c37a8debd4b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_d38a2d1cd26cf3d5cc7c0c37a8debd4b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<img src="http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<img src="http://photos.breadtrip.com/photo_2017_01_15_7de4ad27ebd928391904f4d981e29e17.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_7de4ad27ebd928391904f4d981e29e17.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_01_15_7de4ad27ebd928391904f4d981e29e17.jpg?imageView/2/w/960/q/85',sizingMethod='scale'">&ndash;&gt;-->
+                                    <!--</div>-->
                                 </div>
                             </div>
                         </li>
@@ -181,7 +202,7 @@
                             <div class="project" id="project-4">
                                 <a href="taipei" class="project__header">
                                     <div class="header__image"
-                                         style="background-image: url(http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://photos.breadtrip.com/photo_2017_06_29_2a575b91ed748adc97c07cb3aa696c9b.jpg?imageView/2/w/960/q/85',sizingMethod='scale');">
+                                         style="background-image: url(assets/img/project/header-taipei.JPG); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/project/header-taipei.JPG',sizingMethod='scale'); -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/project/header-taipei.JPG',sizingMethod='scale');">
                                     </div>
                                     <div class="project__content"></div>
                                 </a>
