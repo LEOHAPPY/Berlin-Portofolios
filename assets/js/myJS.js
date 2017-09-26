@@ -42,16 +42,22 @@ $(document).ready(function () {
         $(".project").removeClass("disappear")
         $(".project").find(".project__header").css({"height":"100vh"})
 
-        //recover other project
+        //recalculate
+        basicCalculationUpdate()
+
+        //view focus to top project
+        scrollToHash("#work");
+
     });
 
     // $(".chapterTitle").
-    $("button[id^='moreinfo-p']").on("click", function () {
+    $("div[id^='project-']").on("click", function () {
+        event.preventDefault();
 
         //show the cancel expand button
         $("#expand-close").css({"display":"inline"});
 
-        var project_id = this.id.substring(10, this.id.length);
+        var project_id = this.id.substring(8, this.id.length);
         var currentProject = $("#project-"+project_id);
         //disappear other projects
         projectDisapper(project_id);
@@ -60,7 +66,7 @@ $(document).ready(function () {
         $("#workL").addClass("compress");
         $("#workR").addClass("expand");
 
-        scrollToHash("#work");
+        // scrollToHash("#work");
         //recalculate height
         // basicCalculationUpdate();
 
