@@ -18,9 +18,9 @@ $(document).ready(function () {
         wContentHeight = wR.height(),
         cContentHeight = cR.height();
 
-    aL.css({"height":aContentHeight});
-    wL.css({"height":wContentHeight});
-    cL.css({"height":cContentHeight});
+    // aL.css({"height":aContentHeight});
+    // wL.css({"height":wContentHeight});
+    // cL.css({"height":cContentHeight});
     //
     // $('.chapterTitle').css({"padding-top":winHeight/2});
 
@@ -71,7 +71,7 @@ $(document).ready(function () {
         // basicCalculationUpdate();
 
         //image container cut to 50% height
-        currentProject.find(".project__header").css({"height":"30vh"})
+        currentProject.find(".project__header").css({"height":"50vh"})
 
         currentProject.find(".project__content").css({"display":"inline"});
 

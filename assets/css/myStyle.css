@@ -391,15 +391,6 @@ footer{
     /*box-shadow: 0 0 11px rgba(33,33,33,.2);*/
 }
 
-.project .project__header .header__subtitle {
-    font-size: 11px;
-    letter-spacing: .1em
-}
-
-.project .project__header .header__content {
-    position: relative
-}
-
 .project .project__content {
     display: none;
     overflow: hidden;
@@ -407,14 +398,38 @@ footer{
 }
 
 .project__content .quotation-part{
-    padding-top: 20px;
-    text-align: center;
-    font-size:26px;
-    font-weight:bold;
-    text-transform: uppercase;
-    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    /*height:50vh;*/
 
+    padding-top: 4%;
+    padding-bottom: 4%;
+    /*!*padding-bottom: 20px;*!*/
+    /*text-align: center;*/
+    /*!*font-size:26px;*!*/
+    /*!*font-weight:bold;*!*/
+    /*!*font-family: 'Roboto', sans-serif;*!*/
+
+    /*display: inline-block;*/
+    /*max-width: 600px;*/
+    /*margin-bottom: 15px;*/
+    /*padding-right: 10px;*/
+    /*padding-left: 10px;*/
+    /*!*clear: none;*!*/
+    /*font-family: 'PT Sans', sans-serif;*/
+    /*line-height: 21px;*/
+    /*letter-spacing: 1.2px;*/
+    /*text-transform: uppercase;*/
     border-bottom: 1px solid darkgrey;
+
+
+}
+.quotation-part p{
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0;
+    padding: 0;
 }
 
 .project__content .project-details{
