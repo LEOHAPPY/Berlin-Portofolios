@@ -3,7 +3,10 @@ $(document).ready(function () {
     //dynamic sticky funciton
     var aR = $('#aboutR'),
         wR = $('#workR'),
-        cR = $('#contactR');
+        cR = $('#contactR'),
+        aL = $('#aboutL'),
+        wL = $('#workL'),
+        cL = $('#contactL');
 
     var aOffset = aR.offset().top,
         wOffset = wR.offset().top,
@@ -14,6 +17,12 @@ $(document).ready(function () {
     var aContentHeight = aR.height(),
         wContentHeight = wR.height(),
         cContentHeight = cR.height();
+
+    aL.css({"height":aContentHeight});
+    wL.css({"height":wContentHeight});
+    cL.css({"height":cContentHeight});
+    //
+    // $('.chapterTitle').css({"padding-top":winHeight/2});
 
     /* go to top after refresh */
     $(window).scrollTop(0);
@@ -37,8 +46,9 @@ $(document).ready(function () {
         basicCalculationUpdate();
 
         //image container cut to 50% height
-        // currentProject.find(".header__image").css({"height":"50%"})
-        // currentProject.find(".project__content").css({"display":"inline"})
+        // currentProject.find(".header__image").css({"height":"85%"})
+        currentProject.find(".project__content").css({"display":"inline"});
+        basicCalculationUpdate();
         //container height to 100%
         // $(".project .project__header").css({"height":"100vh"})
         //fix left side
@@ -152,10 +162,12 @@ $(document).ready(function () {
 
     function startFix(name) {
         $(name).addClass("fixed");
+        // $('.chapterTitle').css({"padding-top":"50%"});
     }
 
     function endFix(name) {
         $(name).removeClass("fixed");
+        // $('.chapterTitle').css({"padding-top":"50%","padding-bottom":winHeight/2});
     }
 
     // Select all links with hashes
