@@ -179,7 +179,7 @@ $(document).ready(function () {
             startFix(aboutL);
             if ((scrollTop - aOffset) > (aContentHeight - winHeight)) {
                 endFix(aboutL);
-                adjustTop((aboutL))
+                // adjustTop((aboutL))
             }
         } else {
             endFix(aboutL)
@@ -191,10 +191,13 @@ $(document).ready(function () {
             if ((scrollTop - wOffset) > (wContentHeight - winHeight)) {
                 endFix(workL);
                 adjustTop(workL);
+                basicCalculationUpdate();
+
             }
         } else {
             endFix(workL)
         }
+
 
         var contactL = "#contactL";
         if (scrollTop - cOffset > 0) {
