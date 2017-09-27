@@ -179,7 +179,10 @@ $(document).ready(function () {
             startFix(aboutL);
             if ((scrollTop - aOffset) > (aContentHeight - winHeight)) {
                 endFix(aboutL);
-                // adjustTop((aboutL))
+                //if content height < winHeight
+                if(aContentHeight > winHeight){
+                    adjustTop((aboutL))
+                }
             }
         } else {
             endFix(aboutL)
@@ -204,7 +207,10 @@ $(document).ready(function () {
             startFix(contactL);
             if ((scrollTop - cOffset) > (cContentHeight - winHeight)) {
                 endFix(contactL);
-                // adjustTop(contactL)
+
+                if(cContentHeight > winHeight){
+                    adjustTop((contactL))
+                }
             }
         } else {
             endFix(contactL)
