@@ -34,6 +34,7 @@ div {
     font-size: 20px;
     font-weight:bold;
     padding-top:2%;
+    font-family: 'Share Tech Mono', monospace;
 }
 .fullPage{
     height: 100vh;
@@ -80,7 +81,6 @@ div {
 
     text-align:center;
 
-
     /*display:table;*/
 
     /*animation*/
@@ -91,6 +91,9 @@ div {
 .workPage .leftSide.transitionEffect{
     transition: 1s;
     -webkit-transition: 1s;
+}
+.workPage .leftSide{
+    border-right: 1px solid #f4f2f3;
 }
 
 
@@ -188,7 +191,9 @@ nav > ol li, nav > ul li {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0
+    right: 0;
+    font-family: 'Share Tech Mono', monospace;
+
 }
 
 .main-nav ul {
@@ -207,6 +212,7 @@ nav > ol li, nav > ul li {
 
 .main-nav ul li:first-child:before {
     display: none
+
 }
 
 .main-nav ul li a {

@@ -204,7 +204,7 @@ $(document).ready(function () {
             startFix(contactL);
             if ((scrollTop - cOffset) > (cContentHeight - winHeight)) {
                 endFix(contactL);
-                adjustTop(contactL)
+                // adjustTop(contactL)
             }
         } else {
             endFix(contactL)
