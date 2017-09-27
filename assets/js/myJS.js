@@ -89,7 +89,7 @@ $(document).ready(function () {
         // basicCalculationUpdate();
 
         //image container cut to 50% height
-        currentProject.find(".project__header").css({"height":"30vh"})
+        currentProject.find(".project__header").css({"height":"70vh"})
 
         currentProject.find(".project__content").css({"display":"inline"});
 
