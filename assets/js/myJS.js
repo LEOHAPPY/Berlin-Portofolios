@@ -22,7 +22,7 @@ $(document).ready(function () {
     // wL.css({"height":wContentHeight});
     // cL.css({"height":cContentHeight});
     //
-    // $('.chapterTitle').css({"padding-top":winHeight/2});
+    $('.chapterTitle').css({"padding-top":winHeight*(1-0.618)});
 
     /* go to top after refresh */
     $(window).scrollTop(0);
@@ -48,11 +48,18 @@ $(document).ready(function () {
         //view focus to top project
         scrollToHash("#work");
 
+        //remove transition for left Side
+        $("#work").find(".leftSide").removeClass("transitionEffect");
+
+
     });
 
     // $(".chapterTitle").
     $("div[id^='project-']").on("click", function () {
-        event.preventDefault();
+        // event.preventDefault();
+
+        //add transition Effect fo left side
+        $("#work").find(".leftSide").addClass("transitionEffect");
 
         //show the cancel expand button
         $("#expand-close").css({"display":"inline"});
@@ -71,7 +78,7 @@ $(document).ready(function () {
         // basicCalculationUpdate();
 
         //image container cut to 50% height
-        currentProject.find(".project__header").css({"height":"50vh"})
+        currentProject.find(".project__header").css({"height":"30vh"})
 
         currentProject.find(".project__content").css({"display":"inline"});
 
@@ -152,43 +159,62 @@ $(document).ready(function () {
         var scrollTop = $('body').scrollTop();
 //        console.log(scrollTop - aOffset);
 // console.log(wOffset);
+
+        var aboutL = "#aboutL"
         if (scrollTop - aOffset > 0) {
-            startFix("#aboutL");
+            startFix(aboutL);
             if ((scrollTop - aOffset) > (aContentHeight - winHeight)) {
-                endFix("#aboutL");
+                endFix(aboutL);
+                adjustTop((aboutL))
             }
         } else {
-            endFix("#aboutL")
+            endFix(aboutL)
         }
 
+        var workL = "#workL";
         if (scrollTop - wOffset > 0) {
-            startFix("#workL");
+            startFix(workL);
             if ((scrollTop - wOffset) > (wContentHeight - winHeight)) {
-                endFix("#workL");
+                endFix(workL);
+                adjustTop(workL);
             }
         } else {
-            endFix("#workL")
+            endFix(workL)
         }
 
+        var contactL = "#contactL";
         if (scrollTop - cOffset > 0) {
-            startFix("#contactL");
+            startFix(contactL);
             if ((scrollTop - cOffset) > (cContentHeight - winHeight)) {
-                endFix("#contactL");
+                endFix(contactL);
+                adjustTop(contactL)
             }
         } else {
-            endFix("#contactL")
+            endFix(contactL)
         }
 
     });
 
     function startFix(name) {
         $(name).addClass("fixed");
+        $(name).css({"top":0});
+
         // $('.chapterTitle').css({"padding-top":"50%"});
     }
 
     function endFix(name) {
         $(name).removeClass("fixed");
         // $('.chapterTitle').css({"padding-top":"50%","padding-bottom":winHeight/2});
+    }
+
+    function adjustTop(name) {
+        var topHeight=0;
+        switch (name) {
+            case "#aboutL": topHeight = aContentHeight-winHeight; break;
+            case "#workL": topHeight = wContentHeight-winHeight; break;
+            case "#contactL": topHeight = cContentHeight-winHeight; break;
+        }
+        $(name).css({"top":topHeight});
     }
 
     // Select all links with hashes

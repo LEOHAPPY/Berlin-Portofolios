@@ -55,35 +55,47 @@ div {
 
 .leftSide.fixed{
     position: fixed;
+    top:0;
 }
 
 .leftSide{
     position: absolute;
     /*height:100vh;*/
+    height: 100%;
     width: 50%;
     top: 0;
     left: 0;
     z-index: 200;
 
+    text-align:center;
+
+
     /*display:table;*/
 
     /*animation*/
-    transition: 1s;
-    -webkit-transition: 1s;
+    /*transition: 1s;*/
+    /*-webkit-transition: 1s;*/
 
 }
+.workPage .leftSide.transitionEffect{
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
 
 .leftSide.compress{
     width: 20%;
 }
 
 .chapterTitle{
-    text-align: center;
+    /*text-align: center;*/
     vertical-align: middle;
-    padding-top: 50%;
+    /*padding-top: 50%;*/
     text-transform: uppercase;
     font-family: 'Share Tech Mono', monospace;
     font-weight:bold;
+    display:inline-block;
+
     /*display: flex;*/
     /*justify-content: center;*/
     /*align-items: center;*/
