@@ -31,6 +31,12 @@ $(document).ready(function () {
     });
 
     $("#expand-close").on("click", function () {
+        //add animation
+        // $("#work").find(".leftSide").addClass("transitionEffect");
+
+        //disappear the cancel expand button
+        $("#expand-close").css({"display":"none"});
+
         //expand width 75% 25%
         $("#workL").removeClass("compress");
         $("#workR").removeClass("expand");
@@ -46,17 +52,22 @@ $(document).ready(function () {
         basicCalculationUpdate()
 
         //view focus to top project
-        scrollToHash("#work");
+        scrollToHash("#"+openProjectID);
 
         //remove transition for left Side
-        $("#work").find(".leftSide").removeClass("transitionEffect");
+        // $("#work").find(".leftSide").removeClass("transitionEffect");
 
 
     });
+    var openProjectID = "";
 
     // $(".chapterTitle").
     $("div[id^='project-']").on("click", function () {
         // event.preventDefault();
+
+        //assign openProjectID
+        openProjectID = this.id;
+        // console.log(openProjectID);
 
         //add transition Effect fo left side
         $("#work").find(".leftSide").addClass("transitionEffect");
@@ -91,6 +102,9 @@ $(document).ready(function () {
         // $(".ancestors").find("span").css({"color": "red", "border": "2px solid red"});
 
         //add content to this projects
+
+        //remove transition for left Side
+        $("#work").find(".leftSide").removeClass("transitionEffect");
 
     });
 
