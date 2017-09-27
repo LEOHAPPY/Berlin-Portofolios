@@ -44,7 +44,18 @@ div {
 .welcomePage{
     z-index: 300;
     /*overflow: hidden;*/
+}
+.bg-color-skyblue{
     background: lightskyblue;
+}
+.bg-color-pink{
+    background:rgba(246,202,204,0.89);
+}
+.text-color-white{
+    color: white;
+}
+.text-color-grey-dark{
+    color: darkgrey;
 }
 
 .splitPage{
@@ -127,10 +138,10 @@ div {
     vertical-align: middle
 }
 
-.aboutPage .leftSide{
-    background: #f8cacc;
-    /*background: rgb(41,41,41);*/
-}
+/*.aboutPage .leftSide{*/
+    /*background: #f8cacc;*/
+    /*!*background: rgb(41,41,41);*!*/
+/*}*/
 /*.workPage .leftSide{*/
     /*background: lightsteelblue;*/
 /*}*/
@@ -138,9 +149,9 @@ div {
     /*background: #000;*/
 /*}*/
 
-.contactPage .leftSide{
-    background: #f8cacc;
-}
+/*.contactPage .leftSide{*/
+    /*background: #f8cacc;*/
+/*}*/
 .rightSide{
     position: relative;
     top:0;
